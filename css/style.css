@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* Theme Name: APAO
+ * Theme URI: http:/www.apao.es
+ * Author: Luis V Ballesteros
+ * Author URI: http://lobv.github.io
+ * Description: Asociación de Profesionales Andaluces de Orientación Profesional.
+ * Version: 1.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Tags: bootstrap, responsive, blog, asociación
+ * Text Domain: lovb */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,300,600");
+html {
+  box-sizing: border-box;
+}
+
+header #cabecera {
+  height: 100px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+header #cabecera #logo img {
+  height: 100px;
+}
+header #cabecera #descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-family: Dosis;
+  color: #0a6699;
+}
+header ul#menu.nav.nav-pills {
+  background-color: #0a6699;
+  display: flex;
+  justify-content: space-around;
+}
+header ul#menu.nav.nav-pills li a {
+  color: white;
+  font-family: "Roboto Slab";
+  font-size: 1.2em;
+}
+header ul#menu.nav.nav-pills li a:hover {
+  background-color: #5db75d;
+  color: #ecbe13;
+  text-shadow: 2px 2px 5px black;
+}
+header .navbar {
+  background-color: #0a6699;
+}
+header .navbar a.navbar-brand img {
+  position: absolute;
+  top: 0;
+  height: 60px;
+  padding: 2px 0;
+}
+header .collapse ul.nav.navbar-nav li a {
+  font-family: "Roboto Slab";
+  font-size: 1.3em;
+  color: white;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  #cabecera {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
