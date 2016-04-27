@@ -16,6 +16,9 @@ html {
   box-sizing: border-box;
 }
 
+header {
+  /* MENU */
+}
 header #cabecera {
   height: 100px;
   padding: 10px 0;
@@ -61,6 +64,19 @@ header .collapse ul.nav.navbar-nav li a {
   font-family: "Roboto Slab";
   font-size: 1.3em;
   color: white;
+}
+
+/* CARRUSEL */
+#principal {
+  margin-top: 30px;
+  background-color: lightgray;
+}
+#principal .carousel {
+  margin: 0 100px;
+}
+
+#principal .carousel-inner .carousel-caption {
+  background-color: rgba(10, 102, 153, 0.5);
 }
 
 /* Extra small devices (phones, less than 768px) */
