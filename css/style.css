@@ -72,11 +72,20 @@ header .collapse ul.nav.navbar-nav li a {
   background-color: lightgray;
 }
 #principal .carousel {
-  margin: 0 100px;
+  width: 80%;
+  margin: auto;
 }
-
-#principal .carousel-inner .carousel-caption {
+#principal .carousel .contenidoslide {
+  display: flex;
+}
+#principal .carousel .contenidoslide .carousel-caption {
   background-color: rgba(10, 102, 153, 0.5);
+  padding: 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 /* Extra small devices (phones, less than 768px) */
