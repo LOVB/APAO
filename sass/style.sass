@@ -20,13 +20,22 @@ $tag: #5B7AEF
 $blanco: #ffffff
 $texto: #373740
 
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700')
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700')
 @import url('https://fonts.googleapis.com/css?family=Dosis:400,300,600')
 
 html
   box-sizing: border-box
+
+h2
+  color: $titulo
+  font-family: "Roboto Slab"
+  font-weight: 700
+  text-align: center
+
+h3, p
+  color: $texto
+  font-family: "Roboto"
 
 header
   #cabecera
@@ -41,8 +50,11 @@ header
       flex-direction: column
       justify-content: space-around
       align-items: flex-end
-      font-family: Dosis
-      color: $azul
+      h2,
+      span
+        font-family: Dosis
+        color: $azul
+
 
   /* MENU */
 
@@ -73,13 +85,14 @@ header
 /* CARRUSEL */
 
 #principal
-  margin-top: 30px
-  background-color: lightgray
   .carousel
     width: 80%
     margin: auto
     .contenidoslide
       display: flex
+      .fotoslide img
+        // width: 100%
+        // height: 100%
       .carousel-caption
         background-color: rgba($azul, 0.5)
         padding: 0
@@ -88,16 +101,70 @@ header
         right: 0
         top: 0
         bottom: 0
+        h3, p
+          color: $blanco
+          margin-bottom: 0
 
-// #principal .carousel-inner .item
-//   display: flex
+
+
+#noticias .post
+  display: flex
+  margin: 30px 50px
+  .testpost
+    padding: 0 30px
+    h3, p
+      margin: 0
+    small
+      color: $tag
+    p
+      padding-top: 5px
+      margin-top: 0
+      text-align: justify
+#opinion
+  background-color: rgba($azul, .1)
+  .post
+    padding: 10px 30px
+    .imagen img
+      display: block
+      margin: auto
+    .testpost
+      text-align: center
+      span
+        display: block
+        padding-bottom: 15px
+        text-align: center
+      span.apao-user:before
+        font-family: 'apao-icon'
+        font-size: 1.5em
+        content: "\e901"
+        color: rgba($azul, .3)
+      h3
+        margin-bottom: 5px
+      p
+        text-align: justify
+
+#recursos img
+  margin: auto
+
+footer
+  margin-top: 30px
+  height: 120px
+  .row
+    text-align: center
+    background-color: $titulo
+    color: $blanco
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px)
+  #noticias .post
+    display: flex
+    flex-direction: column
+    align-items: center
 
+//    margin: 30px 50px
 
 /* Medium devices (desktops, 992px and up) */
 @media (max-width: 992px)
