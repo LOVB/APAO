@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'apao-icon';
     src:
-        url('fonts/apao-icon.ttf?bqtu60') format('truetype'),
-        url('fonts/apao-icon.woff?bqtu60') format('woff'),
-        url('fonts/apao-icon.svg?bqtu60#apao-icon') format('svg');
+        url('fonts/apao-icon.ttf?em4ilm') format('truetype'),
+        url('fonts/apao-icon.woff?em4ilm') format('woff'),
+        url('fonts/apao-icon.svg?em4ilm#apao-icon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -23,8 +23,11 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.apao-calendar:before {
+.apao-books:before {
     content: "\e900";
+}
+.apao-price-tag:before {
+    content: "\e902";
 }
 .apao-user:before {
     content: "\e901";

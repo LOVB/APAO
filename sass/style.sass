@@ -8,12 +8,18 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Tags: bootstrap, responsive, blog, asociación
  * Text Domain: lovb
+ */
 
-/* MIXIN
-.centrar
-  display: flex
-  justify-content: flex-end
-  align-items: center
+ /* COLORES */
+
+$verde: #5db75d
+$rojo: #D8524F
+$azul: #0a6699
+$amarillo: #ECBE13
+$azulclaro: #2FB8AC
+$negro: #373740
+
+/* EXTEND */
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700")
 
@@ -25,24 +31,24 @@ html
   box-sizing: border-box
 
 h2
-  color: #5db75d
+  color: $verde
   font-family: "Roboto Slab"
   font-weight: 700
   text-align: center
 
-h3
-  color: #373740
+h3 a
+  color: $azul
   font-family: "Roboto"
 
 p
-  color: #373740
+  color: $negro
   font-family: "Roboto"
   font-size: 1.2em
 
 a
   &:hover, &:active
     text-decoration: none
-    color: #ecbe13
+    color: $amarillo
     text-shadow: 1px 1px 15px gray
 
 .container-fluid
@@ -67,9 +73,9 @@ header
       align-items: flex-end
       h2, span
         font-family: Dosis
-        color: #0a6699
+        color: $azul
   ul#menu.nav.nav-pills
-    background-color: #0a6699
+    background-color: $azul
     display: flex
     justify-content: space-around
     li a
@@ -77,11 +83,11 @@ header
       font-family: "Roboto Slab"
       font-size: 1.2em
       &:hover
-        background-color: #5db75d
-        color: #ecbe13
+        background-color: $verde
+        color: $amarillo
         text-shadow: 2px 2px 5px black
   .navbar
-    background-color: #0a6699
+    background-color: $azul
     a.navbar-brand img
       position: absolute
       top: 0
@@ -92,7 +98,7 @@ header
     font-size: 1.3em
     color: white
 
-/* CARRUSEL
+/* CARRUSEL */
 
 #principal .carousel
   width: 80%
@@ -111,42 +117,60 @@ header
         color: white
         margin-bottom: 0
 
+// NOTICIAS
+
 #noticias
   .post
     margin-top: 30px
-  .imagen
-    @extend .centrar
-    padding: 0
-    margin: inherit
-  .post .testpost
-    padding: 0 30px
-    h3, p
-      margin: 0
-    small
-      color: #5b7aef
-    p
-      padding-top: 5px
-      text-align: justify
+    .imagen
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      padding: 0
+      margin: inherit
+    .testpost
+      padding: 0 30px
+      h3, p
+        margin: 0
+      small
+        color: #cfcfcf
+      p
+        padding-top: 5px
+        text-align: justify
+      .apao-price-tag:before
+        content: "\e902"
+        font-family: "apao-icon"
+        font-size: 1.2em
+        color: rgba(0, 0, 0, .4)
+      .pao-books:before
+        content: "\e900"
+        font-family: "apao-icon"
+        font-size: 1.3em
+        color: rgba(0, 0, 0, .4)
+
+// SOCIOS
 
 #socios
   margin-top: 30px
-  .socios
-    position: relative
-    padding: 0
-    #entrar
-      width: 100%
-      padding: 30px 0
-      position: absolute
-      top: 30%
-      left: 0
-      right: 0
-      background-color: rgba(0, 0, 0, .2)
-      h2
+  .jumbotron
+    background-image: url(../img/socios.jpg)
+    background-size: contain
+    background-position-x: center
+    background-repeat: no-repeat
+    background-color: white
+    .jumbtexto
+      background-color: rgba($azul, .7)
+      padding: 20px
+      text-align: center
+      h2, p, a
         color: white
-        margin-bottom: 20px
-      a
-        display: block
-        marin: auto
+      .btn
+        border: 1px solid white
+        background-color: $rojo
+        &:hover, &:active
+          background-color: red
+
+// OPINION
 
 #opinion
   margin-top: 10px
@@ -166,8 +190,31 @@ header
         padding-top: 10px
         text-align: justify
 
-#recursos img
-  margin: auto
+// RECURSOS
+
+#recursos
+  margin-top: 30px
+  .jumbotron
+    background-image: url("../img/recursos.jpg")
+    background-size: cover
+    background-position-y: 50%
+    background-repeat: no-repeat
+    background-color: $azul
+    .jumbtexto
+      // background-color: rgba($azul, .7)
+      padding: 20px
+      text-align: center
+      h2, p, a
+        color: $azul
+        text-shadow: 2px 2px 5px $negro
+      .btn
+        border: 1px solid white
+        background-color: $azul
+        color: white
+        &:hover, &:active
+          background-color: $azulclaro
+
+// ASIDE
 
 aside
   display: flex
@@ -177,11 +224,13 @@ aside
     font-size: 1.5em
     color: #5b7aef
 
+// FOOTER
+
 footer
   margin-top: 30px
   height: 120px
   text-align: center
-  background-color: #5db75d
+  background-color: $verde
   color: white
 
 /* Listado de todas las mediaquerys que se utilizan en este tema

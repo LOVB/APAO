@@ -8,17 +8,14 @@
  * License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Tags: bootstrap, responsive, blog, asociación
- * Text Domain: lovb */
-/* MIXIN */
+ * Text Domain: lovb
+ */
+ *
+ * /* COLORES */
+/* EXTEND */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
 @import url("https://fonts.googleapis.com/css?family=Dosis:400,300,600");
-.centrar, #noticias .imagen {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -30,8 +27,8 @@ h2 {
   text-align: center;
 }
 
-h3 {
-  color: #373740;
+h3 a {
+  color: #0a6699;
   font-family: "Roboto";
 }
 
@@ -129,7 +126,10 @@ header .collapse ul.nav.navbar-nav li a {
 #noticias .post {
   margin-top: 30px;
 }
-#noticias .imagen {
+#noticias .post .imagen {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   padding: 0;
   margin: inherit;
 }
@@ -140,36 +140,49 @@ header .collapse ul.nav.navbar-nav li a {
   margin: 0;
 }
 #noticias .post .testpost small {
-  color: #5b7aef;
+  color: #cfcfcf;
 }
 #noticias .post .testpost p {
   padding-top: 5px;
   text-align: justify;
 }
+#noticias .post .testpost .apao-price-tag:before {
+  content: "\e902";
+  font-family: "apao-icon";
+  font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.4);
+}
+#noticias .post .testpost .pao-books:before {
+  content: "\e900";
+  font-family: "apao-icon";
+  font-size: 1.3em;
+  color: rgba(0, 0, 0, 0.4);
+}
 
 #socios {
   margin-top: 30px;
 }
-#socios .socios {
-  position: relative;
-  padding: 0;
+#socios .jumbotron {
+  background-image: url(../img/socios.jpg);
+  background-size: contain;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-color: white;
 }
-#socios .socios #entrar {
-  width: 100%;
-  padding: 30px 0;
-  position: absolute;
-  top: 30%;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+#socios .jumbotron .jumbtexto {
+  background-color: rgba(10, 102, 153, 0.7);
+  padding: 20px;
+  text-align: center;
 }
-#socios .socios #entrar h2 {
+#socios .jumbotron .jumbtexto h2, #socios .jumbotron .jumbtexto p, #socios .jumbotron .jumbtexto a {
   color: white;
-  margin-bottom: 20px;
 }
-#socios .socios #entrar a {
-  display: block;
-  marin: auto;
+#socios .jumbotron .jumbtexto .btn {
+  border: 1px solid white;
+  background-color: #d8524f;
+}
+#socios .jumbotron .jumbtexto .btn:hover, #socios .jumbotron .jumbtexto .btn:active {
+  background-color: red;
 }
 
 #opinion {
@@ -195,8 +208,31 @@ header .collapse ul.nav.navbar-nav li a {
   text-align: justify;
 }
 
-#recursos img {
-  margin: auto;
+#recursos {
+  margin-top: 30px;
+}
+#recursos .jumbotron {
+  background-image: url("../img/recursos.jpg");
+  background-size: cover;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  background-color: #0a6699;
+}
+#recursos .jumbotron .jumbtexto {
+  padding: 20px;
+  text-align: center;
+}
+#recursos .jumbotron .jumbtexto h2, #recursos .jumbotron .jumbtexto p, #recursos .jumbotron .jumbtexto a {
+  color: #0a6699;
+  text-shadow: 2px 2px 5px #373740;
+}
+#recursos .jumbotron .jumbtexto .btn {
+  border: 1px solid white;
+  background-color: #0a6699;
+  color: white;
+}
+#recursos .jumbotron .jumbtexto .btn:hover, #recursos .jumbotron .jumbtexto .btn:active {
+  background-color: #2fb8ac;
 }
 
 aside {
