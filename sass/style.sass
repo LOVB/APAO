@@ -1,43 +1,58 @@
-/*
-  Theme Name: APAO
-  Theme URI: http:/www.apao.es
-  Author: Luis V Ballesteros
-  Author URI: http://lobv.github.io
-  Description: Asociación de Profesionales Andaluces de Orientación Profesional.
-  Version: 1.0
-  License: GNU General Public License v2 or later
-  License URI: http://www.gnu.org/licenses/gpl-2.0.html
-  Tags: bootstrap, responsive, blog, asociación
-  Text Domain: lovb */
+/* Theme Name: APAO
+ * Theme URI: http:/www.apao.es
+ * Author: Luis V Ballesteros
+ * Author URI: http://lobv.github.io
+ * Description: Asociación de Profesionales Andaluces de Orientación Profesional.
+ * Version: 1.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Tags: bootstrap, responsive, blog, asociación
+ * Text Domain: lovb
 
-// COLORES
+/* MIXIN
+.centrar
+  display: flex
+  justify-content: flex-end
+  align-items: center
 
-$rojo: #D8524F
-$titulo: #5DB75D
-$azul: #0A6699
-$hover: #ECBE13
-$tag: #5B7AEF
-$blanco: #ffffff
-$texto: #373740
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700")
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700')
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700')
-@import url('https://fonts.googleapis.com/css?family=Dosis:400,300,600')
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700")
+
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,300,600")
 
 html
   box-sizing: border-box
 
 h2
-  color: $titulo
+  color: #5db75d
   font-family: "Roboto Slab"
   font-weight: 700
   text-align: center
 
-h3, p
-  color: $texto
+h3
+  color: #373740
   font-family: "Roboto"
 
+p
+  color: #373740
+  font-family: "Roboto"
+  font-size: 1.2em
+
+a
+  &:hover, &:active
+    text-decoration: none
+    color: #ecbe13
+    text-shadow: 1px 1px 15px gray
+
+.container-fluid
+  padding: 0
+
+.row
+  margin: 0
+
 header
+
   #cabecera
     height: 100px
     padding: 10px 0
@@ -50,28 +65,23 @@ header
       flex-direction: column
       justify-content: space-around
       align-items: flex-end
-      h2,
-      span
+      h2, span
         font-family: Dosis
-        color: $azul
-
-
-  /* MENU */
-
+        color: #0a6699
   ul#menu.nav.nav-pills
-    background-color: $azul
+    background-color: #0a6699
     display: flex
     justify-content: space-around
     li a
-      color: $blanco
+      color: white
       font-family: "Roboto Slab"
       font-size: 1.2em
       &:hover
-        background-color: $titulo
-        color: $hover
-        text-shadow: 2px 2px 5px #000
+        background-color: #5db75d
+        color: #ecbe13
+        text-shadow: 2px 2px 5px black
   .navbar
-    background-color: $azul
+    background-color: #0a6699
     a.navbar-brand img
       position: absolute
       top: 0
@@ -80,97 +90,115 @@ header
   .collapse ul.nav.navbar-nav li a
     font-family: "Roboto Slab"
     font-size: 1.3em
-    color: $blanco
+    color: white
 
-/* CARRUSEL */
+/* CARRUSEL
 
-#principal
-  .carousel
-    width: 80%
-    margin: auto
-    .contenidoslide
-      display: flex
-      .fotoslide img
-        // width: 100%
-        // height: 100%
-      .carousel-caption
-        background-color: rgba($azul, 0.5)
-        padding: 0
-        position: relative
-        left: 0
-        right: 0
-        top: 0
-        bottom: 0
-        h3, p
-          color: $blanco
-          margin-bottom: 0
+#principal .carousel
+  width: 80%
+  margin: auto
+  .contenidoslide
+    display: flex
+    .carousel-caption
+      background-color: rgba(10, 102, 153, 0.5)
+      padding: 0
+      position: relative
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      h3, p
+        color: white
+        margin-bottom: 0
 
-
-
-#noticias .post
-  display: flex
-  margin: 30px 50px
-  .testpost
+#noticias
+  .post
+    margin-top: 30px
+  .imagen
+    @extend .centrar
+    padding: 0
+    margin: inherit
+  .post .testpost
     padding: 0 30px
     h3, p
       margin: 0
     small
-      color: $tag
+      color: #5b7aef
     p
       padding-top: 5px
-      margin-top: 0
       text-align: justify
-#opinion
-  background-color: rgba($azul, .1)
-  .post
-    padding: 10px 30px
-    .imagen img
-      display: block
-      margin: auto
-    .testpost
-      text-align: center
-      span
+
+#socios
+  margin-top: 30px
+  .socios
+    position: relative
+    padding: 0
+    #entrar
+      width: 100%
+      padding: 30px 0
+      position: absolute
+      top: 30%
+      left: 0
+      right: 0
+      background-color: rgba(0, 0, 0, .2)
+      h2
+        color: white
+        margin-bottom: 20px
+      a
         display: block
-        padding-bottom: 15px
-        text-align: center
-      span.apao-user:before
-        font-family: 'apao-icon'
-        font-size: 1.5em
-        content: "\e901"
-        color: rgba($azul, .3)
-      h3
-        margin-bottom: 5px
+        marin: auto
+
+#opinion
+  margin-top: 10px
+  .opinion
+    padding: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    .apao-user:before
+      content: "\e901"
+      font-family: "apao-icon"
+      font-size: 1.3em
+      color: rgba(0, 0, 0, 0.5)
+    .textpost
+      text-align: center
       p
+        padding-top: 10px
         text-align: justify
 
 #recursos img
   margin: auto
 
+aside
+  display: flex
+  flex-direction: column
+  align-items: center
+  .widget2 li
+    font-size: 1.5em
+    color: #5b7aef
+
 footer
   margin-top: 30px
   height: 120px
-  .row
-    text-align: center
-    background-color: $titulo
-    color: $blanco
+  text-align: center
+  background-color: #5db75d
+  color: white
 
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+/* Listado de todas las mediaquerys que se utilizan en este tema
 
-/* Small devices (tablets, 768px and up) */
+/* Extra small devices (phones, less than 768px)
+/* No media query since this is the default in Bootstrap
+/* Small devices (tablets, 768px and up)
 @media (max-width: 768px)
   #noticias .post
     display: flex
     flex-direction: column
     align-items: center
 
-//    margin: 30px 50px
-
-/* Medium devices (desktops, 992px and up) */
+/* Medium devices (desktops, 992px and up)
 @media (max-width: 992px)
   #cabecera
     flex-direction: column
     align-items: center
 
-/* Large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px)
+/* Large devices (large desktops, 1200px and up)
