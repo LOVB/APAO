@@ -18,6 +18,7 @@ $azul: #0a6699
 $amarillo: #ECBE13
 $azulclaro: #2FB8AC
 $negro: #373740
+$blanco: #F6FFF6
 
 /* EXTEND */
 
@@ -79,7 +80,7 @@ header
     display: flex
     justify-content: space-around
     li a
-      color: white
+      color: $blanco
       font-family: "Roboto Slab"
       font-size: 1.2em
       &:hover
@@ -96,7 +97,7 @@ header
   .collapse ul.nav.navbar-nav li a
     font-family: "Roboto Slab"
     font-size: 1.3em
-    color: white
+    color: $blanco
 
 /* CARRUSEL */
 
@@ -114,7 +115,7 @@ header
       top: 0
       bottom: 0
       h3, p
-        color: white
+        color: $blanco
         margin-bottom: 0
 
 // NOTICIAS
@@ -153,22 +154,23 @@ header
 #socios
   margin-top: 30px
   .jumbotron
-    background-image: url(../img/socios.jpg)
+    background-image: url(../img/socio.jpg)
     background-size: contain
-    background-position-x: center
+    background-position: center
     background-repeat: no-repeat
-    background-color: white
+    background-color: $blanco
     .jumbtexto
-      background-color: rgba($azul, .7)
       padding: 20px
       text-align: center
       h2, p, a
-        color: white
+        color: $blanco
+        text-shadow: 2px 2px 5px $negro
+
       .btn
-        border: 1px solid white
-        background-color: $rojo
+        border: 1px solid $blanco
+        background-color: red
         &:hover, &:active
-          background-color: red
+          background-color: $amarillo
 
 // OPINION
 
@@ -195,22 +197,20 @@ header
 #recursos
   margin-top: 30px
   .jumbotron
-    background-image: url("../img/recursos.jpg")
+    background-image: url("../img/recurso.jpg")
     background-size: cover
-    background-position-y: 50%
-    background-repeat: no-repeat
-    background-color: $azul
+    background-position: 50% 35%
     .jumbtexto
       // background-color: rgba($azul, .7)
       padding: 20px
       text-align: center
       h2, p, a
-        color: $azul
+        color: $blanco
         text-shadow: 2px 2px 5px $negro
       .btn
-        border: 1px solid white
+        border: 1px solid $blanco
         background-color: $azul
-        color: white
+        color: $blanco
         &:hover, &:active
           background-color: $azulclaro
 
@@ -231,6 +231,7 @@ footer
   // height: 120px
   text-align: center
   background-color: $verde
+<<<<<<< HEAD
   color: white
   .box
     width: 30%
@@ -246,6 +247,9 @@ footer
 /* firma LOVB */
 
 
+=======
+  color: $blanco
+>>>>>>> dev
 
 /* Listado de todas las mediaquerys que se utilizan en este tema
 

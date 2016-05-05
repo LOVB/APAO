@@ -77,7 +77,7 @@ header ul#menu.nav.nav-pills {
   justify-content: space-around;
 }
 header ul#menu.nav.nav-pills li a {
-  color: white;
+  color: #f6fff6;
   font-family: "Roboto Slab";
   font-size: 1.2em;
 }
@@ -98,7 +98,7 @@ header .navbar a.navbar-brand img {
 header .collapse ul.nav.navbar-nav li a {
   font-family: "Roboto Slab";
   font-size: 1.3em;
-  color: white;
+  color: #f6fff6;
 }
 
 /* CARRUSEL */
@@ -119,7 +119,7 @@ header .collapse ul.nav.navbar-nav li a {
   bottom: 0;
 }
 #principal .carousel .contenidoslide .carousel-caption h3, #principal .carousel .contenidoslide .carousel-caption p {
-  color: white;
+  color: #f6fff6;
   margin-bottom: 0;
 }
 
@@ -163,26 +163,26 @@ header .collapse ul.nav.navbar-nav li a {
   margin-top: 30px;
 }
 #socios .jumbotron {
-  background-image: url(../img/socios.jpg);
+  background-image: url(../img/socio.jpg);
   background-size: contain;
-  background-position-x: center;
+  background-position: center;
   background-repeat: no-repeat;
-  background-color: white;
+  background-color: #f6fff6;
 }
 #socios .jumbotron .jumbtexto {
-  background-color: rgba(10, 102, 153, 0.7);
   padding: 20px;
   text-align: center;
 }
 #socios .jumbotron .jumbtexto h2, #socios .jumbotron .jumbtexto p, #socios .jumbotron .jumbtexto a {
-  color: white;
+  color: #f6fff6;
+  text-shadow: 2px 2px 5px #373740;
 }
 #socios .jumbotron .jumbtexto .btn {
-  border: 1px solid white;
-  background-color: #d8524f;
+  border: 1px solid #f6fff6;
+  background-color: red;
 }
 #socios .jumbotron .jumbtexto .btn:hover, #socios .jumbotron .jumbtexto .btn:active {
-  background-color: red;
+  background-color: #ecbe13;
 }
 
 #opinion {
@@ -212,24 +212,22 @@ header .collapse ul.nav.navbar-nav li a {
   margin-top: 30px;
 }
 #recursos .jumbotron {
-  background-image: url("../img/recursos.jpg");
+  background-image: url("../img/recurso.jpg");
   background-size: cover;
-  background-position-y: 50%;
-  background-repeat: no-repeat;
-  background-color: #0a6699;
+  background-position: 50% 35%;
 }
 #recursos .jumbotron .jumbtexto {
   padding: 20px;
   text-align: center;
 }
 #recursos .jumbotron .jumbtexto h2, #recursos .jumbotron .jumbtexto p, #recursos .jumbotron .jumbtexto a {
-  color: #0a6699;
+  color: #f6fff6;
   text-shadow: 2px 2px 5px #373740;
 }
 #recursos .jumbotron .jumbtexto .btn {
-  border: 1px solid white;
+  border: 1px solid #f6fff6;
   background-color: #0a6699;
-  color: white;
+  color: #f6fff6;
 }
 #recursos .jumbotron .jumbtexto .btn:hover, #recursos .jumbotron .jumbtexto .btn:active {
   background-color: #2fb8ac;
@@ -249,7 +247,7 @@ footer {
   margin-top: 30px;
   text-align: center;
   background-color: #5db75d;
-  color: white;
+  color: #f6fff6;
 }
 footer .box {
   width: 30%;
